@@ -2,9 +2,9 @@
   "name": "parcel-nw-test",
   "version": "1.0.0",
   "description": "Using Parcel with NW.js test",
-  "main": "http://localhost:1234/index.html",
+  "main": "http://localhost:8080/index.html",
   "scripts": {
-    "start": "concurrently -k --kill-others-on-fail \"parcel ./index.html --target=electron\"  \"nw .\""
+    "start": "node bootstrap.js"
   },
   "node-remote": "http://localhost",
   "keywords": [
@@ -15,10 +15,11 @@
   "license": "MIT",
   "devDependencies": {
     "nw": "sdk",
-    "parcel-bundler": "1.x.x"
+    "parcel-bundler": "1.9.7",
+    "express": "4.x.x",
+    "concurrently": "3.x.x"
   },
   "dependencies": {
-    "concurrently": "3.x.x",
     "fs-extra": "7.x.x"
   }
 }
